@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- daisy UI and tailwind css -->
+  
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+   
+
+
+    
+</head>
+<body class="container mx-auto">
+    <header >
+        <nav class="bg-gray-500 p-5 ">
+            <ul class="flex justify-evenly">
+              <li class="text-xl font-bold">Budget: <span style="color: white;" id="budget">2500</span> $</li>
+                <li class="text-xl font-bold">Cart: <span style="color: white;" id="cart">0</span></li>
+                <li class="text-xl font-bold">Left: <span style="color: white;" id="left">6</span></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mx-auto">
+            <!-- container -->
+            <div class="flex gap-5 justify-center">
+                <!-- players -->
+                <div class="grid grid-cols-2 gap-5 p-5">
+                    
+                    
+                        <!-- player 1 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Tamim Iqbal</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn add-btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 2 -->
+                        <div class=" font-bold shadow-2xl p-5">
+                            <h2>Sakib Al-Hasan</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>All-rounder</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 3 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Mushfiq</h2>
+                            <h4>Price: <span>200</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 4 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Liton Das</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 5 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Shanto</h2>
+                            <h4>Price: <span>400</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                 
+
+                 
+                   
+                        <!-- player 6 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Mustafiz</h2>
+                            <h4>Price: <span>400</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Ball</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 7 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Tamim Iqbal</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 8 -->
+                        <div class=" font-bold shadow-2xl p-5">
+                            <h2>Tamim Iqbal</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 9-->
+                        <div class=" font-bold shadow-2xl p-5">
+                            <h2>Tamim Iqbal</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                        <!-- player 10 -->
+                        <div class=" font-bold shadow-2xl p-5 ">
+                            <h2>Tamim Iqbal</h2>
+                            <h4>Price: <span>300</span>$</h4>
+                            <h4 class="mb-3">Category: <span>Bat</span></h4>
+                            <button class="btn add-btn">Add to cart</button>
+                        </div>
+                    
+                </div>
+
+                <!-- my cart -->
+                <div class="text-center p-5 shadow-2xl">
+                    <h1 class="text-3xl font-bold p-2">My Cart</h1>
+                    <hr>
+                    <div class="  flex justify-around">
+                        <span >Name</span>
+                        <span >Price</span>
+                        <span >Category</span>
+                    </div>
+
+                    <div id="selected-players-container"></div>
+                    <hr>
+                    
+                    <h4 class="font-bold p-2" >Total Cost: <span id="total-cost">0</span> $</h4>
+                    <hr>
+
+                    <div class="p-2 ">
+                        <input type="text" name="" id="coupon-code" placeholder="coupon code" class="border-2 border-gray-500 p-1">
+                        <button onclick="updateGrandTotal('apply-btn')" class="btn" >Apply</button>
+                    </div>
+                    <hr>
+
+                    <h4 class="font-bold p-2 ">Grand Total: <span id="grand-total">0</span>$</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- The button to open modal -->
+<label for="my_modal_6" class="btn bg-green-700 text-white">Next</label>
+
+
+    </main>
+    <script src="index.js"></script>
+    <!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+</body>
+</html>
